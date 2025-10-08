@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="home-page">
+   <nav class="navbar navbar-expand-lg shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="homepage.html">
+                <img src="mochalogo.png" alt="Logo" height="80">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item dropdown custom-dropdown-hover">
+                        <a class="nav-link" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="user.png" alt="User" class="custom-user-icon-nav">
+                        </a>
+                        
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li class="px-3 pt-2 pb-1">
+                                <span class="dropdown-header user-name-header">👋 Hi, User Name</span> 
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">My Profile</a></li>
+                            <li><a class="dropdown-item" href="OrdersPage.html">My Orders</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            <img src="fi_shopping-cart.png" alt="Cart" class="custom-cart-icon-nav">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section" 
+    style="background: url('hero\ pic.png') no-repeat center center; background-size: cover;">
+        <div class="container-fluid"> 
+            <div class="hero-content">
+                <h1 class="display-3 fw-bold mb-3">Comfort In Every Sip.</h1>
+                <p class="lead mb-4">Freshly brewed coffee, crafted with love, ready when you are.</p>
+                <a href="#" class="btn-primary-brown btn-hero-lg">Order Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Weekly Top Picks -->
+    <section style="min-height: 100vh; background-color: #F4F2EF; padding: 160px 0;">
+    <div class="container">
+        <div class="text-center mb-5">
+        <h1 class="fw-bold">Weekly Top Picks🔥</h1>
+        <p class="lead fs-3">Our freshest favorites, chosen by you.</p>
+        </div>
+
+        <div class="row g-4">
+        <!-- Coffee Card -->
+        <div class="col-md-4 narrow-col">
+            <div class="card h-100">
+            <div class="image-wrapper mb-0"> 
+                <img src="best seller/Golden Hour Latte 1.png" class="card-img-top" alt="Golden Hour Latte">
+            </div>
+            <div class="card-body d-flex flex-column pt-0"> 
+                <h5 class="card-title">Golden Hour Latte</h5>
+                <p class="card-text flex-grow-1 mb-0">A warm, creamy latte with honey drizzle that feels like sunset in a cup.</p>
+                <div class="d-flex justify-content-between align-items-center mt-3"> 
+                    <div class="d-flex align-items-center"> 
+                        <span class="fw-semibold price-tag me-2">₱160</span> 
+                        <span class="bestseller-badge">Bestseller!</span> 
+                    </div>
+                    <a href="#" class="btn btn-warning btn-sm cart-btn-custom">
+                        <img src="fi_shopping-cart.png" alt="Cart" class="custom-cart-icon">
+                    </a>
+                </div>
+            </div> </div>
+        </div>
+
+        <!-- Coffee Card 2 -->
+        <div class="col-md-4 narrow-col">
+            <div class="card h-100">
+            <div class="image-wrapper mb-0"> 
+                <img src="best seller/capu.png" class="card-img-top" alt="Hazelnut Cappuccino">
+            </div>
+            <div class="card-body d-flex flex-column pt-0"> 
+                <h5 class="card-title">Hazelnut Cappuccino</h5>
+                <p class="card-text flex-grow-1 mb-0">A classic blend of bold espresso, frothy steamed milk, and sweet, creamy hazelnut flavor.</p>
+                <div class="d-flex justify-content-between align-items-center mt-3"> 
+                    <div class="d-flex align-items-center"> 
+                        <span class="fw-semibold price-tag me-2">₱155 </span> 
+                        <span class="bestseller-badge">Bestseller!</span> 
+                    </div>
+                    <a href="#" class="btn btn-warning btn-sm cart-btn-custom">
+                        <img src="fi_shopping-cart.png" alt="Cart" class="custom-cart-icon">
+                    </a>
+                </div>
+            </div> </div>
+        </div>
+
+         <!-- Coffee Card 3 -->
+        <div class="col-md-4 narrow-col">
+            <div class="card h-100">
+            <div class="image-wrapper mb-0"> 
+                <img src="best seller/iced mocha.png" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body d-flex flex-column pt-0"> 
+                <h5 class="card-title">Iced Mocha</h5>
+                <p class="card-text flex-grow-1 mb-0">Rich chocolate and strong espresso poured over ice, topped with whipped cream and a chocolate drizzle.</p>
+                <div class="d-flex justify-content-between align-items-center mt-3"> 
+                    <div class="d-flex align-items-center"> 
+                        <span class="fw-semibold price-tag me-2">₱170</span> 
+                        <span class="bestseller-badge">Bestseller!</span> 
+                    </div>
+                    <a href="#" class="btn btn-warning btn-sm cart-btn-custom">
+                        <img src="fi_shopping-cart.png" alt="Cart" class="custom-cart-icon">
+                    </a>
+                </div>
+            </div> </div>
+        </div>
+
+         <!-- Coffee Card 4 -->
+         <div class="col-md-4 narrow-col">
+            <div class="card h-100">
+            <div class="image-wrapper mb-0"> 
+                <img src="best seller/matcha latte.png" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body d-flex flex-column pt-0"> 
+                <h5 class="card-title">Matcha Latte</h5>
+                <p class="card-text flex-grow-1 mb-0">Smooth, earthy matcha tea whisked with sweet vanilla and chilled milk for a vibrant, refreshing sip.</p>
+                <div class="d-flex justify-content-between align-items-center mt-3"> 
+                    <div class="d-flex align-items-center"> 
+                        <span class="fw-semibold price-tag me-2">₱170</span> 
+                        <span class="bestseller-badge">Bestseller!</span> 
+                    </div>
+                    <a href="#" class="btn btn-warning btn-sm cart-btn-custom">
+                        <img src="fi_shopping-cart.png" alt="Cart" class="custom-cart-icon">
+                    </a>
+                </div>
+            </div> </div>
+        </div>
+
+         <!-- Coffee Card 5 -->
+         <div class="col-md-4 narrow-col">
+            <div class="card h-100">
+            <div class="image-wrapper mb-0"> 
+                <img src="best seller/ham n cheese.png" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body d-flex flex-column pt-0"> 
+                <h5 class="card-title">Ham & Cheese Panini</h5>
+                <p class="card-text flex-grow-1 mb-0">A warm, flaky croissant packed with savory smoked ham and melted, gooey cheddar cheese.</p>
+                <div class="d-flex justify-content-between align-items-center mt-3"> 
+                    <div class="d-flex align-items-center"> 
+                        <span class="fw-semibold price-tag me-2">₱180</span> 
+                        <span class="bestseller-badge">Bestseller!</span> 
+                    </div>
+                    <a href="#" class="btn btn-warning btn-sm cart-btn-custom">
+                        <img src="fi_shopping-cart.png" alt="Cart" class="custom-cart-icon">
+                    </a>
+                </div>
+            </div> </div>
+        </div>
+
+         <!-- Coffee Card 6 -->
+        <div class="col-md-4 narrow-col">
+            <div class="card h-100">
+            <div class="image-wrapper mb-0"> 
+                <img src="best seller/choco chip.png" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body d-flex flex-column pt-0"> 
+                <h5 class="card-title">Chocolate Chip Cookie</h5>
+                <p class="card-text flex-grow-1 mb-0">Big, soft, and chewy with a perfect crisp edge, loaded with generous chunks of dark chocolate.</p>
+                <div class="d-flex justify-content-between align-items-center mt-3"> 
+                    <div class="d-flex align-items-center"> 
+                        <span class="fw-semibold price-tag me-2">₱90 </span> 
+                        <span class="bestseller-badge">Bestseller!</span> 
+                    </div>
+                    <a href="#" class="btn btn-warning btn-sm cart-btn-custom">
+                        <img src="fi_shopping-cart.png" alt="Cart" class="custom-cart-icon">
+                    </a>
+                </div>
+            </div> </div>
+        </div>
+
+        </div>
+    </div>
+    </section>
+
+ <!-- 2nd Hero Section -->
+   <section class="d-flex align-items-center justify-content-center vh-100" 
+        style="background: url('hero\ pic2.png') center/cover no-repeat;">
+        
+        <div class="hero-section-2-content">
+            <h1 class="display-3 fw-bold mb-3">Your Coffee, Ready When You Are.</h1>
+            
+            <p class="lead mb-4">Enjoy a seamless coffee experience. Order online, skip the wait, and pick up your drink freshly brewed and right on time — crafted to make your day a little smoother.</p>
+            
+            <a href="#" class="btn btn-primary-brown btn-hero-lg">Browse Menu</a>
+        </div>
+    </section>
+
+    <!-- Direct Menu -->
+
+    <section class="category-section" style="min-height: 100vh; background-color: #F4F2EF; padding: 170px 0;">
+    <div class="container">
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card h-100"> 
+                    <div class="image-wrapper">
+                        <img src="homepage menu/drinks.png" class="card-img-top" alt="Drinks"> 
+                    </div>
+                    <div class="card-body">
+                    <div>
+                        <h5 class="card-title">Drinks</h5>
+                        <p class="card-text">Hot, iced, or blended — every sip brewed fresh and made just for you.</p>
+                    </div>
+                    <a href="#" class="btn btn-warning btn-sm">
+                        <i class="fas fa-arrow-right"></i> 
+                    </a>
+                </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="image-wrapper">
+                        <img src="homepage menu/pastries.png" class="card-img-top" alt="Pastries">
+                    </div>
+                    <div class="card-body">
+                    <div>
+                        <h5 class="card-title">Pastries & Baked Goods</h5>
+                        <p class="card-text">Flaky, soft, and baked daily — the perfect pairing for your coffee.</p>
+                    </div>
+                    <a href="#" class="btn btn-warning btn-sm">
+                        <i class="fas fa-arrow-right"></i> 
+                    </a>
+                </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="image-wrapper">
+                        <img src="homepage menu/sandwiches.png" class="card-img-top" alt="Sandwiches">
+                    </div>
+                    <div class="card-body">
+                    <div>
+                        <h5 class="card-title">Sandwiches & Light Bites</h5>
+                        <p class="card-text">Toasted and tasty, made to keep you fueled through the day.</p>
+                    </div>
+                    <a href="#" class="btn btn-warning btn-sm">
+                        <i class="fas fa-arrow-right"></i> 
+                    </a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <footer class="text-white pt-5 pb-0 footer-custom"> 
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                <img src="footer/footer.png" alt="Mocha Moments Logo" class="footer-logo-img"> 
+            </div>
+
+            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                <h5 class="fw-bold mb-3">Shop Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">Drinks</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Pastries</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Sandwiches & Light Bites</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Specials</a></li>
+                </ul>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <h5 class="fw-bold mb-3">Get In Touch</h5>
+                <p class="mb-1"><i class="fas fa-map-marker-alt me-2"></i>#123, Dagupan City</p>
+                <p class="mb-1"><i class="fas fa-phone me-2"></i>09-6120-2409</p>
+                <p class="mb-1"><i class="fas fa-envelope me-2"></i>mochamoments@gmail.com</p>
+            </div>
+        </div>
+        </div> 
+    
+    <div class="footer-bottom"> 
+        <div class="container">
+            <div class="d-flex justify-content-center pt-3 pb-2 socials-wrapper">
+                <a href="#" class="mx-2 social-icon-link">
+                    <img src="footer/fb.png" alt="Facebook" class="social-icon-img">
+                </a>
+                <a href="#" class="mx-2 social-icon-link">
+                    <img src="footer/ig.png" alt="Instagram" class="social-icon-img">
+                </a>
+                <a href="#" class="mx-2 social-icon-link">
+                    <img src="footer/tiktok.png" alt="Tiktok" class="social-icon-img">
+                </a>
+            </div>
+
+            <div class="text-center pb-3 copyright-section"> 
+                <small>© 2025, Mocha Moments Coffee Shop.</small>
+            </div>
+        </div>
+    </div>
+</footer>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    // ... existing masterCheckbox logic ...
+    
+    // Custom logic to handle hover for the dropdown
+    document.addEventListener('DOMContentLoaded', function () {
+        const hoverDropdown = document.querySelector('.custom-dropdown-hover');
+        
+        if (hoverDropdown) {
+            // Get the dropdown toggle and menu elements
+            const toggle = hoverDropdown.querySelector('.dropdown-toggle');
+            const menu = hoverDropdown.querySelector('.dropdown-menu');
+
+            // Prevent the default click behavior (which usually closes the menu)
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+            });
+
+            // Re-enable Bootstrap's hide/show logic on mouse events to work with the CSS
+            hoverDropdown.addEventListener('mouseenter', function() {
+                menu.classList.add('show');
+            });
+
+            hoverDropdown.addEventListener('mouseleave', function() {
+                // Ensure the menu hides when the mouse leaves the list item
+                menu.classList.remove('show');
+            });
+        }
+    });
+</script>
+</body>
+</html>

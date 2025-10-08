@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in or create an account</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    
+</head>
+<body>
+    
+<nav class="navbar shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="homepage.html">
+                <img src="mochalogo.png" alt="Logo" height="80">
+            </a>
+        </div>
+    </nav>
+
+    <section class="auth-page">          <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-xl-5">
+                    <h1 class="auth-title">Sign in or create an account</h1>                     
+                    <div class="auth-card">                         
+                        <p class="text-required">* indicates required field</p>                         
+                        <form id="loginForm" novalidate>
+                            
+                            <div class="mb-3">
+                               <input type="text" class="form-control" placeholder="*email address" required id="Email">
+                                <div class="invalid-feedback">Please enter your email.</div>
+                            </div>
+                            
+                            <div class="mb-3 input-group flex-wrap password-input-group"> 
+                                <input type="password" class="form-control login-input-field" placeholder="* Password" required id="passwordInput">
+                                    <span class="input-group-text password-toggle-icon" aria-label="Toggle Password Visibility" id="passwordToggle">
+                                    <i class="fas fa-eye-slash"></i>
+                                </span>
+                                <div class="invalid-feedback w-100">Please enter your password.</div>
+                            </div>
+                            
+                            <div class="row align-items-center mb-4">
+                                <div class="col-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="keepMeSignedIn">
+                                        <label class="form-check-label" for="keepMeSignedIn">
+                                            Keep me signed in.
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 text-end">
+                                    <a href="forgot-password.html" class="login-forgot-link"> 
+                                        Forgot your password?
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-end mt-4 pt-1">
+                                <button type="submit" class="btn btn-primary-custom" id="signInButton">Sign in</button>                             </div>
+                        </form>
+                    </div>
+
+                    <p class="signup-prompt"> Don't have an account? <a href="signup.html">Sign up</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    
+    <footer class="text-white pt-5 pb-0 footer-custom"> 
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                <img src="footer/footer.png" alt="Mocha Moments Logo" class="footer-logo-img"> 
+            </div>
+
+            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                <h5 class="fw-bold mb-3">Shop Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">Drinks</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Pastries</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Sandwiches & Light Bites</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Specials</a></li>
+                </ul>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <h5 class="fw-bold mb-3">Get In Touch</h5>
+                <p class="mb-1"><i class="fas fa-map-marker-alt me-2"></i>#123, Dagupan City</p>
+                <p class="mb-1"><i class="fas fa-phone me-2"></i>09-6120-2409</p>
+                <p class="mb-1"><i class="fas fa-envelope me-2"></i>mochamoments@gmail.com</p>
+            </div>
+        </div>
+        </div> 
+    
+    <div class="footer-bottom"> 
+        <div class="container">
+            <div class="d-flex justify-content-center pt-3 pb-2 socials-wrapper">
+                <a href="#" class="mx-2 social-icon-link">
+                    <img src="footer/fb.png" alt="Facebook" class="social-icon-img">
+                </a>
+                <a href="#" class="mx-2 social-icon-link">
+                    <img src="footer/ig.png" alt="Instagram" class="social-icon-img">
+                </a>
+                <a href="#" class="mx-2 social-icon-link">
+                    <img src="footer/tiktok.png" alt="Tiktok" class="social-icon-img">
+                </a>
+            </div>
+
+            <div class="text-center pb-3 copyright-section"> 
+                <small>© 2025, Mocha Moments Coffee Shop.</small>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/login.js"></script>
+
+</body>
+</html>

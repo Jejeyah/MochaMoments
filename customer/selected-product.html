@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selected Product</title>
+   
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+<body class="product-detail-page">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg shadow-sm">
+        <div class="container">
+           <a class="navbar-brand" href="homepage.html">
+                <img src="mochalogo.png" alt="Logo" height="80">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                </ul>
+
+               <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item dropdown custom-dropdown-hover">
+                        <a class="nav-link" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="user.png" alt="User" class="custom-user-icon-nav">
+                        </a>
+                        
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li class="px-3 pt-2 pb-1">
+                                <span class="dropdown-header user-name-header">👋 Hi, User Name</span> 
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">My Profile</a></li>
+                            <li><a class="dropdown-item" href="#">My Orders</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            <img src="fi_shopping-cart.png" alt="Cart" class="custom-cart-icon-nav">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-5" style="background-color: #F4F2EF; min-height: 100vh;"> 
+        <div class="container">
+
+            <nav aria-label="breadcrumb" class="mb-0 mt-0">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                <a href="menu.html" style="text-decoration: none; color: #555555;" class="">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                <a href="based-product.html" style="text-decoration: none; color: #555555;" class="">Espresso-Based Drinks</a>
+                </li>
+                <li class="breadcrumb-item active breadcrumb-active-page" aria-current="page">
+                    Golden Hour Latte
+                </li>
+            </ol>
+            </nav>
+
+            <hr class="mb-5-custom">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-5 text-center mb-4 mb-md-0 position-relative custom-img-wrapper">
+                    <div class="background-circle"></div>
+                    <img src="goldenhourlatte.png" alt="Golden Hour Latte" class="img-fluid rounded">
+                </div>
+
+
+
+                <div class="col-md-7">
+                    <h3 class="fw-bold Product mb-0">Golden Hour Latte</h3>
+                    <p class="size">Regular 12 oz</p>
+                    <h5 class="fw-bold price-tag">₱ 150</h5>
+                    <p class="description">
+                        Smooth espresso with mellow honeyed sweetness, carrying notes of caramel 
+                        and warm toasted nuts. The finish is creamy and balanced, leaving a light 
+                        floral hint from the honey.
+                    </p>
+                    <button class="btn custom-add-to-cart px-4 rounded-pill fw-bold text-white">
+                        Add To Cart
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+   
+    <footer class="text-white pt-5 pb-0 footer-custom"> 
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                <img src="footer/footer.png" alt="Mocha Moments Logo" class="footer-logo-img"> 
+            </div>
+
+            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                <h5 class="fw-bold mb-3">Shop Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">Drinks</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Pastries</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Sandwiches & Light Bites</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Specials</a></li>
+                </ul>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <h5 class="fw-bold mb-3">Get In Touch</h5>
+                <p class="mb-1"><i class="fas fa-map-marker-alt me-2"></i>#123, Dagupan City</p>
+                <p class="mb-1"><i class="fas fa-phone me-2"></i>09-6120-2409</p>
+                <p class="mb-1"><i class="fas fa-envelope me-2"></i>mochamoments@gmail.com</p>
+            </div>
+        </div>
+        </div> 
+    
+    <div class="footer-bottom"> 
+        <div class="container">
+            <div class="d-flex justify-content-center pt-3 pb-2 socials-wrapper">
+                <a href="#" class="mx-2 social-icon-link">
+                    <img src="footer/fb.png" alt="Facebook" class="social-icon-img">
+                </a>
+                <a href="#" class="mx-2 social-icon-link">
+                    <img src="footer/ig.png" alt="Instagram" class="social-icon-img">
+                </a>
+                <a href="#" class="mx-2 social-icon-link">
+                    <img src="footer/tiktok.png" alt="Tiktok" class="social-icon-img">
+                </a>
+            </div>
+
+            <div class="text-center pb-3 copyright-section"> 
+                <small>© 2025, Mocha Moments Coffee Shop.</small>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

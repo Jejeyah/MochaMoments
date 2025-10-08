@@ -1,0 +1,947 @@
+
+     body {
+            background-color: var(--light-bg); 
+        }
+
+    :root {
+            --primary-orange: #E59040;
+             --text-black: #000000;
+            --dark-brown: #341A0E;
+            --light-bg: #F4F2EF;
+            --footer-brown: #724B26;
+            --button-gradient-start: #F5A96A;
+            --secondary-orange: #ff920d; /* For total amounts */
+            --ready-green: #38A169;
+            --completed-orange: #341A0E; /* Used for Completed History & Totals */
+            --pending-yellow: #ECC944;
+            --preparing-orange: #DD6B20;
+            --revoked-red: #E53E3E;
+        }
+
+    @font-face {
+        font-family: 'Tan Nimbus';
+        src: url('tan-nimbus.otf') format('opentype');
+        font-weight: 700; 
+        font-style: normal;
+        font-display: swap; 
+    }
+    
+
+    .navbar-brand,
+    .navbar-nav, .nav-link, .footer-custom
+    {
+    font-family: 'Poppins', sans-serif !important; 
+}
+    .navbar {
+    background-color: var(--light-bg) !important; 
+}
+
+    .navbar-brand {
+        font-weight: 100 !important; 
+        color: #341A0E !important; 
+    }
+
+    .navbar-nav .nav-link {
+        font-weight: 400 !important; 
+    }
+
+    .navbar-nav .nav-link.active {
+        font-weight: 700 !important; 
+        position: relative;
+        color: #341A0E; 
+    }
+
+    .navbar-nav .nav-link.active::after {
+        content: "";
+        position: absolute;
+        bottom: 0; 
+        left: 0;
+        width: 100%;
+        height: 3px; 
+        background-color: #E59040;
+        border-radius: 2px; 
+    }
+    .navbar-nav .nav-link {
+        padding-bottom: 0.5rem; 
+    }
+    
+    .custom-cart-icon-nav {
+        width: 24px; 
+        height: 24px;
+    }    
+ 
+    .custom-user-icon-nav {
+        width: 20px; 
+        height: 20px;
+    } 
+
+   
+    @media (max-width: 991.98px) { 
+        .navbar-collapse {
+            padding-top: 1rem;
+            border-top: 1px solid #E0E0E0; 
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        
+        .navbar-nav .nav-item {
+            margin-bottom: 0.5rem; 
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 1.1rem !important; 
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            padding-bottom: 0.25rem !important; 
+        }
+
+        .navbar-nav .nav-link.active::after {
+            content: "";
+            position: absolute;
+            bottom: -3px; 
+            left: 0;
+            width: 55px;
+            height: 2px; /* Manipis na linya */
+            background-color: var(--primary-orange);
+            border-radius: 0;
+        }
+        
+        .custom-cart-icon-nav{
+            /* Gawing malaki ang icons sa mobile */
+            width: 24px; 
+            height: 24px;
+        }
+
+        .custom-user-icon-nav{
+            width: 20px; 
+            height: 20px;
+        } 
+      
+        .navbar-nav:last-child {
+            display: flex;
+            flex-direction: row;
+            margin-top: 1rem;
+            gap: 1.5rem;
+        }
+    }
+    .custom-dropdown-hover:hover > .dropdown-menu {
+        display: block; 
+        margin-top: -1px; 
+        background-color: var(--light-bg);
+    }
+
+    .dropdown-toggle::after {
+        display: none;
+    }
+
+    .dropdown-menu {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); 
+            border: none; 
+        }
+
+    .dropdown-header.user-name-header {
+        font-weight: 600 !important; 
+        color: var(--text-black) !important; 
+        font-size: 0.95rem; 
+        display: block; 
+    }
+/* -- Navbar end -- */
+
+/* --- Footer Styles --- */
+        .footer-custom {
+            background-color: var(--footer-brown); /* Slightly darker brown from the image bottom */
+            color: white;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            width: 100%;
+        }
+        .footer-custom a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 400;
+            font-size: 0.95rem;
+        }
+        .footer-custom a:hover {
+            color: var(--primary-orange);
+        }
+        
+        .footer-custom .fa-brands, .footer-custom .fa-solid {
+            font-size: 1.25rem;
+        }
+        .footer-logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+        
+        .copyright {
+            color: #D3D3D3;
+            font-weight: 300;
+        }
+
+        /* --- Footer Logo Image Styling --- */
+
+        .footer-logo-img {
+    /* Set a maximum size for desktop */
+            max-width: 401px; 
+            max-height: 179px;
+            height: auto; 
+            width: 100%; /* CRITICAL: Allows the image to shrink to the width of its column */
+            display: block; 
+            margin-bottom: 0.40rem; 
+        }
+
+        @media (max-width: 767.98px) {
+            /* This rule applies to all screen sizes smaller than the Bootstrap 'md' breakpoint */
+            
+            /* Center the logo and text columns when they stack */
+            .footer-custom .container .row > div {
+                text-align: center;
+            }
+
+            /* Add space between stacked columns */
+            .footer-custom .col-md-4 {
+                margin-bottom: 2rem !important;
+            }
+            
+            /* On stacked mobile view, let the logo take full width of the container (max-width) */
+            .footer-custom .col-md-4:first-child {
+                width: 100%;
+                margin-bottom: 2.5rem !important; /* Extra space below logo */
+            }
+        }
+
+.footer-custom .footer-bottom {
+    padding-top: 0.5rem; 
+    padding-bottom: 2rem;
+    box-shadow: none; 
+    border-top: none;
+    width: 100%; 
+    margin-top: 2rem; 
+}
+
+.footer-custom .socials-wrapper {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4); 
+    margin-left: -100vw; 
+    margin-right: -100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    width: 200vw;
+    padding-bottom: 1.5rem !important;
+    padding-top: 1.5rem !important; 
+}
+
+.footer-custom .socials-wrapper a {
+    position: relative;
+    z-index: 10;
+}
+
+.footer-custom .copyright-section {
+    padding-top: 1.5rem !important; 
+    margin-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.footer-custom .social-icon-img {
+    width: 24px; 
+    height: 24px;
+}
+
+.footer-custom .social-icon-link {
+    color: inherit !important; 
+    font-size: initial !important; 
+}
+
+.footer-custom .socials-wrapper .mx-2 {
+    margin-left: 0.5rem !important;
+    margin-right: 0.5rem !important;
+}
+/* -- Footer Ends -- */
+
+/* -- Homepage Start -- */
+.home-page .hero-content .display-3 {
+    font-family: 'Tan Nimbus', serif !important; 
+    font-size: 7.50rem !important; 
+    font-weight: 700 !important;
+    line-height: 1.3;
+    color: #f8f6f2 !important; 
+}
+
+.hero-section {
+    height: 100vh;
+    position: relative; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(31, 14, 2, 0.3); 
+    z-index: 1; 
+}
+
+.home-page .hero-content {
+    position: relative;
+    z-index: 2; 
+    max-width: 800px; 
+    margin-left: 5%; 
+}
+
+.btn-primary-brown {
+    background-color: var(--footer-brown) !important; /* #724B26 */
+    border: none !important;
+    color: #FFFFFF !important;
+    font-weight: 400;
+    border-radius: 40px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
+    transition: background-color 0.2s;   
+     text-decoration: none;
+}
+
+.btn-primary-brown:hover {
+    background-color: var(--dark-brown) !important; /* Darker brown on hover */
+    color: #FFFFFF !important;
+
+}
+
+/* Reusable Modifier: Large/Hero Button Size */
+.btn-hero-lg {
+    padding: 15px 50px !important;
+    font-size: 1.70rem !important;
+}
+
+/* Reusable Utility: Defines a standard lift/shadow effect */
+.hover-lift-shadow {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-lift-shadow:hover {
+    transform: translateY(-5px) scale(1.02); 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35); 
+}
+
+.home-page .hero-content .lead {
+    color: #FFFFFF; 
+    font-size: 1.60rem; 
+    padding-top: 4%;
+    font-family: 'Quicksand', sans-serif; 
+}
+
+.hero-section-2-content {
+    position: relative;
+    z-index: 2; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    text-align: center; 
+}
+
+.hero-section-2-content .display-3 {
+    font-family: 'Tan Nimbus', serif !important; 
+    font-size: 6.5rem !important;
+    font-weight: 700 !important;
+    line-height: 1.30; 
+    color: #f8f6f2 !important; 
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4); 
+}
+
+.hero-section-2-content .lead {
+    color: #F4F2EF !important; 
+    font-size: 1.35rem !important; /* Smaller size */
+    padding-top: 1rem;
+    font-family: 'Quicksand', sans-serif; 
+    margin-bottom: 2rem !important; 
+}
+
+
+
+/* --- Product Card Styles --- */
+.bestseller-badge {
+    background-color: #FDF3E9; 
+    color: #341A0E; 
+    font-size: 0.90rem; 
+    font-weight: 300;
+    padding: 2px 6px;
+    border-radius: 50px;
+    font-style: italic;
+}
+
+.price-tag {
+    color: #E59040; 
+}
+
+.card-title {
+    color: #341A0E; 
+    font-weight: 700;
+    margin-top: 0; 
+    font-size: 1.4rem; 
+    margin-bottom: 0.25rem; 
+}
+
+.card-text {
+    color: #341A0E; 
+    font-size: 1rem; 
+    margin-bottom: 0 !important;
+    font-weight: 400; 
+}
+
+.card {
+    border: none; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    height: 450px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02); 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35); 
+}
+
+/* ... rest of card and category styles ... */
+
+.card-body {
+    padding: 1rem 1.75rem 1.25rem 1.75rem !important; 
+    display: flex;
+    flex-direction: column;
+    padding-top: 0 !important;
+}
+
+.card-body .mt-3 {
+    margin-top: 0.5rem !important; 
+}
+.narrow-col {
+    padding-left: 1rem !important; 
+    padding-right: 1rem !important; 
+}
+
+.image-wrapper {
+    height: 260px;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    border-top-left-radius: 12px; 
+    border-top-right-radius: 12px;
+    margin-bottom: 0 !important; 
+    background-color: #FFFFFF; 
+}
+
+.card-img-top {
+    padding: 5px;
+    max-height: 100%; 
+    border-top-left-radius: 12px; 
+    border-top-right-radius: 12px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; 
+}
+
+.custom-cart-icon {
+    width: 24px; 
+    height: 24px; 
+    display: block; 
+}
+
+.cart-btn-custom {
+    padding: 0 !important; 
+}
+
+.card .btn-warning {
+    background-color: transparent !important; 
+    border: none !important; 
+    padding: 0 !important; 
+}
+
+.text-center h1 {
+    font-size: 3.70rem;
+    margin-bottom: 30px;
+    color: #341A0E;
+}
+.text-center p.lead {
+    color: #341A0E !important;
+    font-family: var(--bs-font-sans-serif) !important; 
+    font-size: 1.30rem !important; 
+    font-weight: 400;
+}
+
+.category-section .card {
+    display: flex;
+    flex-direction: column; 
+    background-color: #724B26; 
+    border: none;
+    border-radius: 0px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+    height: 530px; 
+    overflow: hidden; 
+    position: relative;
+    transition: box-shadow 0.3s ease;
+}
+
+.category-section .card:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5); 
+}
+
+.category-section .image-wrapper {
+    height: 85% !important; 
+    background-color: #724B26 !important; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 1.5rem !important; 
+    border-radius: 0;
+    position: relative;
+    width: 100%; 
+}
+
+.category-section .card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; 
+    border-radius: 0; 
+}
+
+.category-section .card-body {
+    flex-grow: 1; 
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    position: relative; 
+    height: auto; 
+}
+
+.category-section .card-title {
+    color: #FFFFFF !important; 
+    font-size: 1.5rem; 
+    font-weight: 700;
+    margin-bottom: 0.25rem; 
+}
+
+.category-section .card-text {
+    color: #F4F2EF !important; 
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.25; 
+    margin-bottom: 0rem; 
+    opacity: 0.95; 
+}
+
+.category-section .btn-warning {
+    background-color: transparent !important; 
+    color: #F4F2EF !important; 
+    border: none !important;
+    padding: 0 !important;
+    font-size: 1.6rem;
+    align-self: flex-end; 
+}
+    /* -- Homepage End -- */
+
+
+    /* --- Menu Page Specific Styles (Scoped with .menu-page) --- */
+
+.menu-page .menu-section {
+    padding-top: 5rem; /* More vertical space */
+    padding-bottom: 18rem;
+    /* You must define var(--light-bg) somewhere in your CSS, 
+       but if not, use a direct color like #F4F2EF */
+    background-color: var(--light-bg); 
+}
+
+/* Styling for the main section title (e.g., "Menu") */
+.menu-page .menu-title-main {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-brown);
+    margin-bottom: 3rem; /* Space before first category */
+}
+
+/* Styling for the first category header only */
+.menu-page .category-header:first-of-type {
+    margin-top: 2rem; 
+}
+
+/* Styling for all category headers (e.g., "Drinks") */
+.menu-page .category-header {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--dark-brown);
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+}
+
+/* Styling for the text link under the image (e.g., "Espresso-Based Drinks") */
+.menu-page .category-item-text {
+    font-weight: 500; 
+    font-size: 1.3rem;
+    color: var(--text-black) !important;
+}
+
+/* Styling for the circular images */
+.menu-page .category-img {
+    width: 150px; 
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; /* Makes the images circular */
+    transition: transform 0.2s ease-in-out; 
+    border: 1px solid #E0E0E0; 
+}
+
+/* Hover effect on the category link (<a> tag) affecting the image */
+.menu-page a:hover .category-img {
+    transform: scale(1.05); /* Makes the image 5% larger */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Spacing classes */
+.menu-page .extra-top-space {
+    margin-top: 5rem !important; 
+}
+
+.menu-page .extra-item-space {
+    margin-bottom: 3rem !important; 
+}
+        
+/* ---------------------------------------------------- */
+/* --- Cleaned Menu/Item Styles (using new classes) --- */
+/* ---------------------------------------------------- */
+
+/* 1. Main Item Card Image Styling (Consolidated .menu-item-card img rules) */
+.menu-item-card img {
+    margin-bottom: 2rem !important; 
+    transition: transform 0.3s ease !important; 
+}
+
+/* 2. Hover Effect */
+.menu-item-card:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* 3. Title/Heading Underline */
+.menu-title-underline {
+    border-bottom: 1px solid #ccc; 
+    padding-bottom: 2rem;      
+    margin-bottom: 1rem;
+    color: var(--dark-brown); /* Using Variable */ 
+}
+
+/* 4. Item Name Styling */
+.menu-item-card .fw-normal {
+     margin-bottom: 0px !important;
+     font-weight: 600 !important;  
+     font-size: 1.1rem;
+}
+
+/* 5. Price Tag Styling */
+.menu-price-tag {
+    font-weight: 500 !important; 
+    color: var(--primary-orange) !important; /* Using Variable */
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+/* 6. Item Gap (Spacing) */
+.menu-item-gap {
+    margin-bottom: 3rem !important; 
+}
+
+/* Other classes (like .breadcrumb-active-page, which is fine) are not repeated here. */
+
+.breadcrumb-active-page {
+    color: #000 !important;
+    font-weight: 500 !important;
+}
+
+.mb-large-gap {
+    margin-bottom: 3rem !important; 
+}
+
+.mb-5-custom {
+    margin-bottom: 4rem !important; 
+    margin-top: 4rem;
+}
+    /* --- Unique Product Page Styles (SCOPED) --- */
+
+/* Scoped Image Wrapper and Background */
+.product-detail-page .custom-img-wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+.product-detail-page .background-circle {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 220px; 
+    height: 220px;
+    background-color: #E59040; /* I-replace ng variable kung defined */
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.product-detail-page .custom-img-wrapper img {
+    position: relative;
+    z-index: 1;
+}
+
+/* Scoped Product Info */
+.product-detail-page .Product{
+    color: #341A0E;
+    font-size: 2.60rem;
+}
+
+.product-detail-page .size{
+    font-weight: 200;
+    font-size: 1.40rem;
+}
+
+.product-detail-page .price-tag{
+    color: #E59040;
+    font-size: 1.50rem;
+    font-weight: 400;
+}
+
+.product-detail-page .description{
+    color: #222222;
+    font-weight: 300 !important;
+    font-size: 1.20rem;
+}
+
+/* Scoped Add To Cart Button */
+.product-detail-page .custom-add-to-cart {
+    background-color: #E59040;
+    border: none;
+    transition: background-color 0.3s ease; 
+}
+
+.product-detail-page .custom-add-to-cart.btn {
+    font-weight: 400 !important; 
+    padding-left: 2rem; 
+    padding-right: 2rem;
+    width: 240px;
+    padding-top: 0.70rem; 
+    padding-bottom: 0.70rem;
+    font-size: 1.4rem; 
+    margin-top: 0.90rem;
+}
+
+.product-detail-page .custom-add-to-cart:hover {
+    background-color: #d18239;
+}
+    
+.form-check-input:checked {
+    border-color: var(--primary-orange); /* Orange ring */
+    background-color: white; /* White center */
+    /* Inner orange dot via SVG */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23E59040'/%3e%3c/svg%3e");
+    background-position: center;
+    background-size: 50% 50%; 
+}
+
+/* Remove Bootstrap focus ring */
+.form-check-input:focus {
+    box-shadow: none !important;
+}
+
+ /* --- Custom Styles for Create Account Page --- */
+        .auth-page {
+            background-color: var(--light-bg) !important;
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+            min-height: 85vh;
+            display: flex;
+            align-items: flex-start;
+            flex-grow: 1;
+        }
+        
+        .auth-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-brown);
+            margin-bottom: 2rem;
+        }
+
+        /* Style for the main form card */
+        .auth-card {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 3rem;
+        }
+
+        .auth-card .d-flex.justify-content-end {
+            /* FIX: Force the container to occupy all available horizontal space 
+                    within the card to correctly push the button to the right */
+            width: 100%; 
+            
+            /* ADDED: Add padding below the button for visual balance inside the smaller card */
+            padding-bottom: 0.5rem; 
+        }
+
+        .form-label-header {
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: var(--dark-brown);
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .text-required {
+            font-size: 0.9rem;
+            font-weight: 300;
+            color: #888;
+            margin-bottom: 2rem;
+        }
+
+        /* Specific styling for the password input group icon (fa-eye-slash) */
+        .input-group-text {
+            background-color: white;
+            border-left: none; /* Merges the input and the icon visually */
+            cursor: pointer;
+            color: #888;
+        }
+
+      
+.btn-primary-custom {
+     background-color: var(--primary-orange) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 600 !important;
+    padding: 0.65rem 2.5rem !important; /* Consistent padding */
+    border-radius: 50rem !important; 
+    font-size: 1.1rem !important;
+    transition: background-color 0.2s;
+    min-width: 150px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary-custom:hover {
+    background-color: #DD7727 !important; 
+    color: white !important;
+}
+
+.btn-primary-custom:active, 
+.btn-primary-custom:focus {
+    background-color: var(--primary-orange) !important;
+    box-shadow: none !important;
+}
+
+.d-grid.gap-2.col-6.mx-auto.mt-4 button {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Resets Bootstrap's default rounding and sets consistent vertical padding */
+.form-control {
+ border-radius: 0 !important; /* Confirms sharp corners */
+    padding: 0.9rem 1.5rem !important; /* Ensures a consistent, taller input box height */
+    border-color: #DDD; 
+}
+    
+
+
+/* 1. Custom class for all pill-shaped inputs (Username/Email) */
+.login-input-field {
+    border-radius: 50rem; /* Full pill shape for standalone inputs */
+    border-color: #DDD;
+}
+
+
+/* --- Password Input Group Styling --- */
+
+/* Ensures input and toggle render as a single unit */
+.password-input-group {
+    border-collapse: separate; 
+}
+
+/* 2. Styling for the INPUT element within the group (Password) */
+.password-input-group > .form-control {
+    border-radius: 0; 
+    border-right: none;
+    flex-grow: 1;
+
+}
+
+.password-input-group:focus-within > .form-control {
+    border-right: none;
+    z-index: 3;
+}
+
+
+/* 3. Styling for the ICON element (The Eye) */
+.password-toggle-icon { 
+    background-color: white;
+     border-radius: 0; 
+    border-left: none; 
+    border-color: #DDD;
+    cursor: pointer;
+    color: #888;
+    padding-right: 1.5rem;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+
+/* Checkbox styling is consistent */
+.form-check-label {
+    font-size: 0.95rem;
+    color: var(--dark-brown);
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-orange) !important;
+    border-color: var(--primary-orange) !important;
+    background-size: 100% 100% !important; 
+    background-position: center !important; 
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e") !important;
+}
+
+.form-check-input:checked {
+    filter: none !important;
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(229, 144, 64, 0.25);
+}
+
+.login-forgot-link {
+    color: var(--secondary-text);
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: inline-block;
+    transition: color 0.2s;
+    margin-top: -3px;
+}
+.login-forgot-link:hover {
+    color: #DD7727; 
+}
+
+/* "Don't have an account?" text styling is consistent */
+.signup-prompt {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--dark-brown);
+    font-weight: 300;
+}
+.signup-prompt a {
+    color: var(--secondary-text);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.signup-prompt a:hover {
+    color: #DD7727;
+}

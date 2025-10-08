@@ -1,0 +1,234 @@
+/* --- Custom Styles for My Orders Page --- */
+        .mm-status-badge{
+            font-weight: 400 !important;
+        }
+
+        .mm-my-orders-page {
+            background-color: var(--light-bg) !important;
+            padding-top: 3rem;
+            padding-bottom: 15rem;
+            min-height: 85vh; 
+        }
+
+        .mm-page-title {
+            text-align: center; 
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--dark-brown);
+            margin-bottom: 0.5rem;
+        }
+
+        .mm-section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: var(--dark-brown);
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .mm-breadcrumb-active-page {
+            color: #000 !important;
+            font-weight: 300 !important;
+        }
+
+        /* Order Card Styles */
+        .mm-order-card {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            border: 1px solid #E0E0E0;
+        }
+
+        .mm-order-number {
+            color: var(--dark-brown);
+            font-weight: 600 !important;
+        }
+
+        .mm-order-date {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .mm-status-badge {
+            font-weight: 600 !important;
+        }
+
+        
+        .mm-item-price {
+            color: var(--text-black) !important; 
+        }
+
+
+        .mm-ready-color { color: var(--ready-green); }
+        .mm-completed-color { color: var(--completed-orange); } 
+        .mm-pending-color { color: var(--pending-yellow); }
+        .mm-preparing-color { color: var(--preparing-orange); }
+        .mm-revoked-color { color: var(--revoked-red); }
+
+        .mm-item-name {
+            color: var(--dark-brown);
+            font-weight: 500;
+        }
+        
+        .mm-item-count {
+            color: #888;
+            margin-right: 15px;
+        }
+
+        .mm-total-label {
+            color: var(--dark-brown);
+        }
+
+        /* --- Order Status Timeline (Custom Component) --- */
+        
+        .mm-timeline {
+            position: relative;
+            max-width: 300px; 
+            margin: 0 auto;
+        }
+
+        .mm-step {
+            position: relative;
+            z-index: 2;
+            background-color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 10px;
+            color: white; 
+            border: 3px solid #E0E0E0; 
+            transition: all 0.3s;
+        }
+
+        .mm-line {
+            height: 2px;
+            flex-grow: 1; 
+            margin: 0 -1px; 
+            background-color: #E0E0E0; 
+            z-index: 1;
+        }
+
+        .mm-step.complete {
+            background-color: var(--ready-green); 
+            border-color: var(--ready-green);
+        }
+
+        .mm-line.active { background-color: var(--ready-green); }
+
+        .mm-step.active {
+            background-color: white;
+            color: var(--ready-green);
+            border: 3px solid var(--ready-green);
+        }
+
+        .mm-pending-status .mm-line.active { background-color: var(--pending-yellow); }
+        .mm-pending-status .mm-step.active { 
+            color: var(--pending-yellow); 
+            border-color: var(--pending-yellow); 
+        }
+
+        .mm-preparing-status .mm-line.active { background-color: var(--preparing-orange); }
+        .mm-preparing-status .mm-step.active { 
+            color: var(--preparing-orange); 
+            border-color: var(--preparing-orange); 
+        }
+
+        .mm-timeline-status-text {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--dark-brown);
+            margin-top: 0.5rem;
+        }
+
+        .mm-timeline-btn-wrapper {
+            margin-top: 1rem;
+        }
+
+        .mm-order-history-item {
+            background-color: #FFFFFF;
+            border: 1px solid #E0E0E0 !important;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+        .mm-order-history-item .mm-revoked-color { color: var(--revoked-red); }
+
+        .mm-timeline-labels {
+            max-width: 340px; 
+            margin: 0 auto; 
+            margin-top: 5px; 
+            font-size: 0.75rem; 
+            color: #201f1f; 
+        }
+        
+        .mm-product-img-frame {
+            width: 80px; 
+            height: 80px; 
+            padding: 8px; 
+            background-color: #D9D9D9; 
+            position: static !important; 
+            display: flex !important;
+            justify-content: center !important; 
+            align-items: center !important; 
+            flex-shrink: 0; 
+        }
+
+        .mm-product-img-frame .mm-item-img {
+            position: static !important;
+            top: auto !important;
+            left: auto !important;
+            transform: none !important;
+            margin: 0 !important; 
+            padding: 0 !important; 
+            display: block !important;
+            object-fit: contain; 
+            width: 100% !important; 
+            height: 100% !important;
+        }
+        .mm-total-amount-display {
+            font-size: 1.70rem;
+            color: #ff920d; 
+            font-weight: normal; 
+        }
+
+        .mm-footer-custom {
+            background-color: var(--footer-brown); 
+        }
+        .mm-footer-logo-img {
+            max-width: 150px; /* Adjust as needed */
+        }
+        .mm-social-icon-img {
+            width: 30px; 
+            height: 30px;
+            transition: opacity 0.2s;
+        }
+        .mm-social-icon-link:hover .mm-social-icon-img {
+            opacity: 0.8;
+        }
+        .mm-footer-bottom {
+            background-color: var(--dark-brown); 
+        }
+        .mm-copyright-section small {
+            color: #FFFFFF;
+        }
+        .mm-footer-custom a {
+            color: #F4F2EF; /* Light color for links */
+            transition: color 0.2s;
+        }
+        .mm-footer-custom a:hover {
+            color: var(--primary-orange); 
+        }
+        .mm-footer-custom h5 {
+            color: #FFFFFF;
+        }
+        .mm-footer-custom p {
+            color: #F4F2EF;
+        }
+
+    .mm-timer-number {
+        color: #FF5733 !important; 
+        font-weight: 700; 
+        font-size: 1.1em; 
+    }
