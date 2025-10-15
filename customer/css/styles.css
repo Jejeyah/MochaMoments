@@ -1,8 +1,10 @@
 
      body {
             background-color: var(--light-bg); 
-        }
+             overflow-x: hidden; /* Temporarily hides horizontal scrollbar */
+}
 
+       
     :root {
             --primary-orange: #E59040;
              --text-black: #000000;
@@ -944,4 +946,196 @@
 }
 .signup-prompt a:hover {
     color: #DD7727;
+}
+
+/* --- About Us Page Content Styling --- */
+
+.about-us-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-brown);
+    margin-bottom: 3rem;
+}
+
+/* Hero Image Section */
+.hero-image-container {
+    position: relative;
+    max-width: 1000px; /* To constrain the image size like in the visual */
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    filter: brightness(0.85); /* Slightly darken the image */
+}
+
+.hero-text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.1); /* Slight, subtle overlay */
+    font-family: 'Quicksand', sans-serif; 
+}
+
+.hero-text-overlay p {
+    color: white;
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.3;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    max-width: 80%;
+}
+
+/* General Section Styling */
+.section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #4a4a4a;
+}
+
+/* Our Story Section */
+.our-story-section {
+    background-color: var(--light-bg); 
+    box-shadow: none; /* Removed shadow since the section blends with the body */
+    padding-top: 4rem !important; /* Adjust spacing as needed */
+    padding-bottom: 4rem !important;
+}
+
+.story-text p {
+    font-size: 1.20rem;
+    line-height: 1.8;
+    color: var(--dark-brown);
+}
+
+/* --- Why Choose Us Section --- */
+
+/* The main container for the entire section (the background behind the card) */
+.why-choose-us-section {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+    background-color: var(--light-bg); /* Use your light body background here */
+}
+
+/* The new card that holds the 3 items */
+.why-choose-us-card {
+    background-color: #FFFFFF; /* A slightly different light background than body, for contrast */
+    border-radius: 25px; /* Adjust for desired roundness */
+    max-width: 900px; /* Constrain the width of the card */
+}
+
+/* Individual items (Perfectly Brewed, Made With Care, A Cozy Escape) */
+.choose-us-item {
+    padding: 30px; /* Internal padding for each item */
+    /* Removed border-right to match image */
+}
+
+/* Vertical separator line between items */
+.choose-us-item:not(:last-child) {
+    border-right: 1px solid #E0E0E0; /* Light gray separator for desktop */
+}
+
+@media (max-width: 767.98px) {
+    .choose-us-item:not(:last-child) {
+        border-right: none; /* No vertical separator on mobile */
+        border-bottom: 1px solid #E0E0E0; /* Horizontal separator on mobile */
+        padding-bottom: 30px; /* Padding for horizontal separator */
+        margin-bottom: 30px; /* Space between stacked items */
+    }
+    .choose-us-item:last-child {
+        border-bottom: none; /* No border for the last item on mobile */
+    }
+}
+
+/* Wrapper for the image icons (to center them) */
+.choose-us-icon-wrapper {
+    width: 60px; /* Fixed width for the wrapper */
+    height: 60px; /* Fixed height for the wrapper */
+    display: flex; /* Use flexbox to center the icon inside */
+    align-items: center; /* Vertically center icon */
+    justify-content: center; /* Horizontally center icon */
+    margin-bottom: 15px; /* Space below the icon */
+    background-color: transparent; /* No background on the wrapper */
+    /* Removed border-radius and background-color from .choose-us-icon-wrapper */
+}
+
+/* Styling for the actual image icons */
+.choose-us-icon-img {
+    max-width: 100%; /* Ensures image fits within its wrapper */
+    max-height: 100%; /* Ensures image fits within its wrapper */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below image */
+    object-fit: contain; /* Ensures the whole image is visible */
+}
+
+/* Headings for each item (Perfectly Brewed, Made With Care) */
+.choose-us-heading {
+    font-size: 1.50rem; /* Slightly larger heading */
+    font-weight: 700; /* Bolder heading */
+    color: var(--dark-brown); /* Darker brown for headings */
+    margin-bottom: 10px;
+}
+
+/* Description text for each item */
+.choose-us-text {
+    font-size: 1.30rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color:var(--dark-brown); /* Slightly lighter gray for body text */
+}
+
+/* Mission and Vision Section */
+.mission-vision-section {
+    background-color: var(--light-bg); 
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+    border-top: none; /* Removing the separating border */
+}
+.mission-vision-section .col-md-6:first-child {
+    border-right: 1px solid #ddd; /* Separator line */
+}
+
+@media (max-width: 767.98px) {
+    .mission-vision-section .col-md-6:first-child {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 2rem;
+    }
+}
+
+.mission-vision-text {
+    font-size: 1.40rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--dark-brown);
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mission-vision-section .section-title {
+    color: var(--dark-brown); /* Mocha brown for Mission/Vision titles */
+    font-size: 2rem;
+}
+
+.mm-page-top-spacer {
+    /* Adjust this value for more or less space */
+    padding-top: 5rem; 
+}
+/* Styling for the main section title (Ensure color fits the new background) */
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    /* Use a dark color so it stands out on the light brown card */
+    color: var(--dark-brown); 
 }
